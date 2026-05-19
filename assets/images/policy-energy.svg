@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="policyEnergyTitle">
+  <title id="policyEnergyTitle">풍력, 태양광, 자전거가 있는 에너지 전환</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8F6F0"/>
+      <stop offset="100%" stop-color="#FDFAF4"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8FD4B0"/>
+      <stop offset="100%" stop-color="#5DA481"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#sky)"/>
+  <ellipse cx="400" cy="340" rx="460" ry="90" fill="url(#hill)" opacity="0.55"/>
+  <circle cx="680" cy="72" r="42" fill="#FFE08A"/>
+  <circle cx="680" cy="72" r="52" fill="#FFE08A" opacity="0.25"/>
+  <g transform="translate(140 120)">
+    <rect x="46" y="95" width="8" height="120" rx="4" fill="#4A7260"/>
+    <g transform="translate(50 95)">
+      <path d="M0 0 L0 -78 L10 -4 Z" fill="#3AAF7A"/>
+      <path d="M0 0 L68 38 L10 -4 Z" fill="#5DD4A8"/>
+      <path d="M0 0 L-68 38 L10 -4 Z" fill="#7AE8C4"/>
+    </g>
+  </g>
+  <g transform="translate(480 200)">
+    <rect x="8" y="8" width="48" height="32" rx="3" fill="#4A9FD4" transform="skewY(-8)"/>
+    <rect x="78" y="8" width="48" height="32" rx="3" fill="#4A9FD4" transform="skewY(-8)"/>
+    <rect x="0" y="44" width="130" height="6" rx="2" fill="#4A7260"/>
+  </g>
+  <path d="M60 310 Q220 280 400 300 T740 290" fill="none" stroke="#C4697A" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+  <g transform="translate(340 268)">
+    <circle cx="18" cy="42" r="14" fill="none" stroke="#3D5C4E" stroke-width="3"/>
+    <circle cx="58" cy="42" r="14" fill="none" stroke="#3D5C4E" stroke-width="3"/>
+    <path d="M18 42 L32 18 L48 24 L58 42" fill="none" stroke="#3D5C4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="12" r="7" fill="#C4697A"/>
+  </g>
+  <g fill="#3AAF7A">
+    <rect x="92" y="278" width="6" height="22" rx="2" fill="#4A7260"/>
+    <circle cx="95" cy="272" r="16"/>
+    <rect x="600" y="268" width="6" height="28" rx="2" fill="#4A7260"/>
+    <circle cx="603" cy="260" r="18"/>
+  </g>
+</svg>
