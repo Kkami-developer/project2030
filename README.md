@@ -36,6 +36,13 @@ python -m http.server 8080
 
 > 후원·회원가입 링크는 외부(hsit.co.kr)로 연결됩니다. Pages URL만 바뀌면 되고, 별도 서버 설정은 필요 없습니다.
 
+## 링크 미리보기 (OG / 카카오·SNS 공유)
+
+- **제목:** 녹색전환연구소의 첫 후원 캠페인 - 프로젝트 2030
+- **썸네일:** `assets/images/story-1.png` (대선 의제 격상 섹션 사진)
+
+배포 후 [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) 또는 카카오 디벨로퍼 도구에서 URL을 한 번 스크랩해 캐시를 갱신하면 미리보기가 안정적으로 반영됩니다.
+
 ## 수정 시 참고
 
 - 후원 URL은 `index.html`과 `assets/js/script.js`의 `REGULAR_URL` 등에 있습니다. 변경 시 두 곳을 함께 확인하세요.

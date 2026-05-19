@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>녹색전환연구소 · 첫 번째 후원 캠페인 · 프로젝트 2030</title>
     <meta name="description" content="13년간 기후 현장에서 정책을 증명해온 녹색전환연구소가 처음으로 후원 캠페인을 시작합니다. 당신의 참여가 2030년 기후 정책의 방향을 결정합니다." />
-    <meta property="og:title" content="녹색전환연구소의 첫 번째 후원 캠페인, 프로젝트 2030 - 당신의 참여로 실현됩니다." />
+    <link rel="canonical" href="" id="canonical-link" />
+
+    <meta property="og:site_name" content="녹색전환연구소" />
+    <meta property="og:title" content="녹색전환연구소의 첫 후원 캠페인 - 프로젝트 2030" />
     <meta property="og:description" content="13년간 현장에서 정책으로 증명해온 녹색전환연구소의 첫 번째 캠페인. 2030년까지 남은 시간, 당신의 참여로 실현됩니다." />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="./assets/images/story-1.png" />
+    <meta property="og:image:alt" content="기후 단일 의제 대선 TV 토론회를 요구하는 시민 캠페인" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="녹색전환연구소의 첫 후원 캠페인 - 프로젝트 2030" />
+    <meta name="twitter:description" content="13년간 현장에서 정책으로 증명해온 녹색전환연구소의 첫 번째 캠페인. 2030년까지 남은 시간, 당신의 참여로 실현됩니다." />
+    <meta name="twitter:image" content="./assets/images/story-1.png" />
+
+    <script>
+      (function () {
+        var pageUrl = location.href.split("#")[0];
+        var baseDir = location.pathname.replace(/[^/]*$/, "");
+        var imageUrl = location.origin + baseDir + "assets/images/story-1.png";
+        var setContent = function (selector, value) {
+          var el = document.querySelector(selector);
+          if (el) el.setAttribute("content", value);
+        };
+        setContent('meta[property="og:url"]', pageUrl);
+        setContent('meta[property="og:image"]', imageUrl);
+        setContent('meta[name="twitter:image"]', imageUrl);
+        var canonical = document.getElementById("canonical-link");
+        if (canonical) canonical.href = pageUrl;
+      })();
+    </script>
+
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
