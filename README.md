@@ -46,4 +46,4 @@ python -m http.server 8080
 ## 수정 시 참고
 
 - 후원 URL은 `index.html`과 `assets/js/script.js`의 `REGULAR_URL` 등에 있습니다. 변경 시 두 곳을 함께 확인하세요.
-- 문의: `yeonju@igt.or.kr` · `02-2135-1148`
+- 문의: `office@igt.or.kr` · `02-2135-1148`
