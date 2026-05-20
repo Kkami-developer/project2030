@@ -604,7 +604,7 @@ if (financeChart) {
   const shareBlock = document.querySelector(".share-block");
   if (!shareBlock) return;
 
-  const url = "https://igtproject2030.netlify.app/";
+  const url = "https://project2030.igt.or.kr/";
   const title =
     document.querySelector('meta[property="og:title"]')?.getAttribute("content") ||
     "녹색전환연구소의 첫 후원 캠페인 - 프로젝트 2030";
