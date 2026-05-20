@@ -129,26 +129,6 @@ if (urgencyTimeline) {
 }
 
 /* ===========================
-   섹션 패널 전환 (스크롤 몰입)
-=========================== */
-if (!prefersReducedMotion) {
-  const panelSections = document.querySelectorAll(".section-snap");
-  const panelObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList.toggle("is-panel-in", entry.isIntersecting);
-      });
-    },
-    { threshold: 0.22, rootMargin: "-12% 0px -12% 0px" }
-  );
-  panelSections.forEach((sec) => {
-    if (sec.id === "hero") return;
-    sec.classList.add("section-panel");
-    panelObserver.observe(sec);
-  });
-}
-
-/* ===========================
    스토리 카드 — 상세 모달
 =========================== */
 const STORY_DATA = {

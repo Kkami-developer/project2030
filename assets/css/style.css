@@ -42,7 +42,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
-  scroll-snap-type: y proximity;
   overflow-x: clip;
 }
 
@@ -198,7 +197,6 @@ a { color: inherit; text-decoration: none; }
     calc(3.25rem + env(safe-area-inset-bottom, 0px));
   padding-left: clamp(1.35rem, 4vw, 2rem);
   box-sizing: border-box;
-  scroll-snap-align: start;
   overflow: visible;
   background:
     repeating-linear-gradient(
@@ -2619,14 +2617,6 @@ a, button, summary, .amount-btn, .method-btn, .floating-donate, .binder-tab, [da
     font-size: clamp(0.95rem, 3.8vw, 1.15rem);
     line-height: 1.55;
   }
-  html {
-    scroll-snap-type: y proximity;
-    scroll-padding-top: var(--nav-height);
-  }
-  .section-snap {
-    scroll-snap-stop: normal;
-    min-height: auto;
-  }
   .hero-stage.section-snap {
     min-height: calc(100dvh - var(--nav-height));
   }
@@ -2762,20 +2752,7 @@ a, button, summary, .amount-btn, .method-btn, .floating-donate, .binder-tab, [da
   .footer-site-social { justify-content: flex-start; }
 }
 
-/* —— 스크롤 스냅·줄 단위 등장·도시 일러스트·스토리 모달 —— */
-.section-snap {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-}
-@media (min-width: 641px) {
-  .section-snap:not(.hero) {
-    min-height: min(100svh, 100%);
-  }
-}
-.hero.section-snap {
-  scroll-snap-align: start;
-}
-
+/* —— 줄 단위 등장·도시 일러스트·스토리 모달 —— */
 .reveal-line {
   opacity: 0;
   transform: translateY(1.1rem);
@@ -2785,27 +2762,7 @@ a, button, summary, .amount-btn, .method-btn, .floating-donate, .binder-tab, [da
   opacity: 1;
   transform: translateY(0);
 }
-@media (max-width: 640px) {
-  html {
-    scroll-snap-type: none;
-  }
-  .section-snap,
-  .hero-stage {
-    scroll-snap-align: none;
-  }
-  .section-snap:not(.hero) {
-    min-height: auto;
-  }
-  .section-panel,
-  .section-panel:not(.is-panel-in),
-  .section-panel.is-panel-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-snap-type: none; }
   .stories-stat__cover,
   .stories-stat__num {
     opacity: 1;
@@ -2868,16 +2825,12 @@ a, button, summary, .amount-btn, .method-btn, .floating-donate, .binder-tab, [da
   .fade-in.visible .highlight::before { transform: scaleX(1); }
 }
 
-.section-panel {
-  transition: opacity 0.5s ease, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.section-panel.is-panel-in {
+.section-panel,
+.section-panel.is-panel-in,
+.section-panel:not(.is-panel-in) {
   opacity: 1;
   transform: none;
-}
-.section-panel:not(.is-panel-in) {
-  opacity: 0.92;
-  transform: scale(0.992);
+  transition: none;
 }
 
 /* 2030 비전 — 서사형 쇼케이스 */
