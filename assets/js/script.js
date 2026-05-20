@@ -318,6 +318,7 @@ const runStoriesStatSequence = () => {
 
 if (storiesStatBlock && impactTitleMark && !prefersReducedMotion) {
   let sequencePlayed = false;
+  const isMobileStat = () => window.matchMedia("(max-width: 720px)").matches;
   const statSeqObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -327,9 +328,12 @@ if (storiesStatBlock && impactTitleMark && !prefersReducedMotion) {
         statSeqObserver.unobserve(entry.target);
       });
     },
-    { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+    {
+      threshold: isMobileStat() ? 0.08 : 0.2,
+      rootMargin: isMobileStat() ? "0px 0px 0px 0px" : "0px 0px -10% 0px",
+    }
   );
-  statSeqObserver.observe(document.getElementById("impact") || storiesStatBlock);
+  statSeqObserver.observe(storiesStatBlock);
 } else if (storiesStatBlock) {
   impactTitleMark?.classList.add("is-visible");
   storiesStatBlock.classList.add("is-visible", "is-seq-cover", "is-seq-num");
